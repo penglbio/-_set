@@ -42,7 +42,8 @@ wget -c https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
 
 dpkg -i teamviewer_amd64.deb
 
-
+##conda env
+cp *envs /home/galaxy/miniconda2/envs/ 
 
 
 
