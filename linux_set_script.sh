@@ -1,3 +1,4 @@
+/etc/apt/source.list
 ###set ssh psc without key
 step1:install sshserver
 step2:ssh-keygen -t sra
@@ -32,6 +33,16 @@ cp */packages /home/galaxy/R/3.5.0/lib/R/library/
 install.packages("usethis")
 usethis::edit_r_environ()
 R_MAX_NUM_DLLS=256
+##install sougou teamviewer sublime
+src="$HOME/src"
+
+cd $src
+
+wget -c https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+
+dpkg -i teamviewer_amd64.deb
+
+
 
 
 
