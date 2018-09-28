@@ -25,3 +25,13 @@ crontab crontab-backup
 # month：表示月份，可以是从1到12之间的任何整数。
 # week：表示星期几，可以是从0到7之间的任何整数，这里的0或7代表星期日。
 # command：要执行的命令，可以是系统命令，也可以是自己编写的脚本文件。 
+
+###install_R.sh
+sh ~/git/Rinstall/install_R.sh
+cp */packages /home/galaxy/R/3.5.0/lib/R/library/
+install.packages("usethis")
+usethis::edit_r_environ()
+R_MAX_NUM_DLLS=256
+
+
+
