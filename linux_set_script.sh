@@ -53,14 +53,10 @@ conda env update -f qiime1_environment.yml
 conda create -n gmatic python=3
 conda env update -f gmatic_environment.yml
 
-##python3
-wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz
-tar vxf Python-3.7.2.tar.xz
-./configure -prefix=/home/lpeng/Python3
-make && make install
-vi ~/.bashrc
-export PATH=/home/lpeng/Python3/bin:$PATH
-./pip3 install snakemake==3.13.3
+##qiime1:snakemake use gmatic
+/home/lpeng/miniconda3/envs/gmatic/bin/snakemake -rpn
+nohup /home/lpeng/miniconda3/envs/gmatic/bin/snakemake -j 30 -rp >> nohup.log 2>&1 &
+
 
 
 
