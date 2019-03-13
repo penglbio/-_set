@@ -44,7 +44,26 @@ dpkg -i teamviewer_amd64.deb
 
 ##conda env
 cd /home/galaxy/git/condaEnv/
-/home/galaxy/git/condaEnv/install_conda.sh
+/home/galaxy/git/condaEnv/install_conda.shqiime1_environment.yml
+wget https://repo.continuum.io/miniconda/Miniconda3-4.5.4-Linux-x86_64.sh
+bash Miniconda3-4.5.4-Linux-x86_64.sh
+conda create -n qiime1 python=2
+conda env update -f qiime1_environment.yml
+
+conda create -n gmatic python=3
+conda env update -f gmatic_environment.yml
+
+##python3
+wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz
+tar vxf Python-3.7.2.tar.xz
+./configure -prefix=/home/lpeng/Python3
+make && make install
+vi ~/.bashrc
+export PATH=/home/lpeng/Python3/bin:$PATH
+./pip3 install snakemake==3.13.3
+
+
+
 
 
 
